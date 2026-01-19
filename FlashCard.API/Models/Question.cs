@@ -12,4 +12,5 @@ public class Question
 
     public Subject Subject { get; set; } = null!;
     public LevelOfDifficulty LevelOfDifficulty { get; set; } = null!;
+    public ICollection<TestQuestion> TestQuestions { get; set; } = new List<TestQuestion>();
 }

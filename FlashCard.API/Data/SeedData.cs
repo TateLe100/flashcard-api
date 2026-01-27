@@ -11,6 +11,7 @@ public static class SeedData
         context.Database.EnsureCreated();
 
         // Seed Subjects
+
         if (!context.Subjects.Any())
         {
             context.Subjects.AddRange(
@@ -35,7 +36,7 @@ public static class SeedData
         // Seed Questions
         if (!context.Questions.Any())
         {
-            var math = context.Subjects.First(s => s.Name == "Math");
+            var math = context.Subjects.First(s => s.Name == "History");
             var easy = context.LevelOfDifficulties.First(l => l.Name == "Easy");
 
             context.Questions.Add(new Question
